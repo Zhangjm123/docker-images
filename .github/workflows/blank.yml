@@ -27,4 +27,5 @@ jobs:
 
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
-         skopeo copy docker://docker.io/zabbix/zabbix-server-mysql:alpine-6.0.29 docker://registry.ap-southeast-1.aliyuncs.com/zjm-test/zabbix-server-mysql:alpine-6.0.29
+         skopeo copy docker://docker.io/zabbix/zabbix-web-nginx-mysql:alpine-6.0.29 docker://registry.ap-southeast-1.aliyuncs.com/zjm-test/zabbix-web-nginx-mysql:alpine-6.0.29
+         skopeo copy docker://docker.io/zabbix/zabbix-java-gateway:alpine-6.0.29 docker://registry.ap-southeast-1.aliyuncs.com/zjm-test/zabbix-java-gateway:alpine-6.0.29
