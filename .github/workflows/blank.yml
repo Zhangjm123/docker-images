@@ -21,10 +21,15 @@ jobs:
       uses: docker/login-action@v2.2.0
       with:
         registry: registry.cn-hangzhou.aliyuncs.com
-        username: 
-        password: 
+        username: 17681863060
+        password: Zjm@12345
         logout: false
 
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
-         skopeo copy docker://docker.io/grafana/grafana:11.0.0 docker://registry.cn-hangzhou.aliyuncs.com/zjm-test/grafana:11.0.0
+         skopeo copy docker://docker.io/library/nginx:stable-alpine docker://registry.cn-hangzhou.aliyuncs.com/zjm-test/nginx:stable-alpine
+         skopeo copy docker://docker.io/library/mysql:5.7 docker://registry.cn-hangzhou.aliyuncs.com/zjm-test/mysql:5.7
+         skopeo copy docker://docker.io/library/redis:6.2 docker://registry.cn-hangzhou.aliyuncs.com/zjm-test/redis:6.2
+         skopeo copy docker://docker.io/prom/prometheus:latest docker://registry.cn-hangzhou.aliyuncs.com/zjm-test/prometheus:latest
+         skopeo copy docker://flashcatcloud/categraf:latest docker://registry.cn-hangzhou.aliyuncs.com/zjm-test/categraf:latest
+         skopeo copy docker://flashcatcloud/nightingale:6.3.4 docker://registry.cn-hangzhou.aliyuncs.com/zjm-test/nightingale:6.3.4
