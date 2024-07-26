@@ -27,9 +27,6 @@ jobs:
 
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
-         skopeo copy docker://docker.io/jumpserver/jms_core:v4.0.1 docker://registry.cn-hangzhou.aliyuncs.com/zjm-test/jms_core:v4.0.1
-         skopeo copy docker://docker.io/jumpserver/jms_koko:v4.0.1 docker://registry.cn-hangzhou.aliyuncs.com/zjm-test/jms_koko:v4.0.1
-         skopeo copy docker://docker.io/jumpserver/guacd:1.5.5-bookworm docker://registry.cn-hangzhou.aliyuncs.com/zjm-test/guacd:1.5.5-bookworm
          skopeo copy docker://docker.io/jumpserver/jms_lion:v4.0.1 docker://registry.cn-hangzhou.aliyuncs.com/zjm-test/jms_lion:v4.0.1
          skopeo copy docker://docker.io/jumpserver/jms_chen:v4.0.1 docker://registry.cn-hangzhou.aliyuncs.com/zjm-test/jms_chen:v4.0.1
          skopeo copy docker://docker.io/jumpserver/jms_web:v4.0.1 docker://registry.cn-hangzhou.aliyuncs.com/zjm-test/jms_web:v4.0.1
